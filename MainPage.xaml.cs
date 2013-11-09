@@ -24,7 +24,7 @@ namespace panes
 
         private void PlayButton_Click(object sender, RoutedEventArgs e)
         {
-
+            NavigationService.Navigate(new Uri(@"/Page1.xaml", UriKind.Relative));
         }
 
         // Sample code for building a localized ApplicationBar

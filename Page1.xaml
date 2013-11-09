@@ -1,0 +1,96 @@
+﻿<phone:PhoneApplicationPage
+    x:Class="panes.Page1"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:phone="clr-namespace:Microsoft.Phone.Controls;assembly=Microsoft.Phone"
+    xmlns:shell="clr-namespace:Microsoft.Phone.Shell;assembly=Microsoft.Phone"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    FontFamily="{StaticResource PhoneFontFamilyNormal}"
+    FontSize="{StaticResource PhoneFontSizeNormal}"
+    Foreground="{StaticResource PhoneForegroundBrush}"
+    SupportedOrientations="Portrait" Orientation="Portrait"
+    mc:Ignorable="d"
+    shell:SystemTray.IsVisible="True">
+
+    <!--LayoutRoot is the root grid where all page content is placed-->
+    <Grid x:Name="LayoutRoot" Background="Transparent">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="*"/>
+        </Grid.RowDefinitions>
+        
+        <StackPanel x:Name="TitlePanel" Grid.Row="0" Margin="24,24,24,24" Orientation="Horizontal">
+            <TextBlock Text="LEVEL"/>
+            <TextBlock Text="PAR" Margin="50 0 0 0" />
+            <TextBlock Text="CURRENT" Margin="50 0 0 0"/>
+        </StackPanel>
+
+        <Grid x:Name="Buttons" Grid.Row="1" Margin="24 0 24 0">
+
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="Auto"/>
+                <ColumnDefinition Width="Auto"/>
+                <ColumnDefinition Width="*"/>
+            </Grid.ColumnDefinitions>
+
+            <Button x:Name="Undo" Grid.Column="0" Height="76">
+                <TextBlock Text="undo"/>
+            </Button>
+            <Button x:Name="restart" Grid.Column="1" Height="76">
+                <TextBlock Text="restart"/>
+            </Button>
+
+            <Grid x:Name="Target" Height="100" Grid.Column="2" HorizontalAlignment="Right" Width="100">
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="*"/>
+                    <RowDefinition Height="*"/>
+                    <RowDefinition Height="*"/>
+                </Grid.RowDefinitions>
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="*"/>
+                    <ColumnDefinition Width="*"/>
+                    <ColumnDefinition Width="*"/>
+                </Grid.ColumnDefinitions>
+
+                <Rectangle Fill="Green" Grid.Row="0" Grid.Column="0" Margin="1 1 1 1" RadiusX="100" RadiusY="100"/>
+                <Rectangle Fill="Red" Grid.Row="0" Grid.Column="1" Margin="1 1 1 1" RadiusX="100" RadiusY="100"/>
+                <Rectangle Fill="Orange" Grid.Row="0" Grid.Column="2" Margin="1 1 1 1" RadiusX="100" RadiusY="100"/>
+                <Rectangle Fill="Yellow" Grid.Row="1" Grid.Column="0" Margin="1 1 1 1" RadiusX="100" RadiusY="100"/>
+                <Rectangle Fill="Blue" Grid.Row="1" Grid.Column="1" Margin="1 1 1 1" RadiusX="100" RadiusY="100"/>
+                <Rectangle Fill="White" Grid.Row="1" Grid.Column="2" Margin="1 1 1 1" RadiusX="100" RadiusY="100"/>
+                <Rectangle Fill="Purple" Grid.Row="2" Grid.Column="0" Margin="1 1 1 1" RadiusX="100" RadiusY="100"/>
+                <Rectangle Fill="Green" Grid.Row="2" Grid.Column="1" Margin="1 1 1 1" RadiusX="100" RadiusY="100"/>
+                <Rectangle Fill="Orange" Grid.Row="2" Grid.Column="2" Margin="1 1 1 1" RadiusX="100" RadiusY="100"/>
+
+            </Grid>
+        </Grid>
+
+        <Grid x:Name="PlayingField" Grid.Row="2" Height="400" Width="400" Margin="24 24 24 24">
+            <Grid.RowDefinitions>
+                <RowDefinition Height="*"/>
+                <RowDefinition Height="*"/>
+                <RowDefinition Height="*"/>
+            </Grid.RowDefinitions>
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="*"/>
+                <ColumnDefinition Width="*"/>
+                <ColumnDefinition Width="*"/>
+            </Grid.ColumnDefinitions>
+            
+            <Rectangle Fill="Green" Grid.Row="0" Grid.Column="0" Margin="10 10 10 10" RadiusX="100" RadiusY="100"/>
+            <Rectangle Fill="Red" Grid.Row="0" Grid.Column="1" Margin="10 10 10 10" RadiusX="100" RadiusY="100"/>
+            <Rectangle Fill="Orange" Grid.Row="0" Grid.Column="2" Margin="10 10 10 10" RadiusX="100" RadiusY="100"/>
+            <Rectangle Fill="Yellow" Grid.Row="1" Grid.Column="0" Margin="10 10 10 10" RadiusX="100" RadiusY="100"/>
+            <Rectangle Fill="Blue" Grid.Row="1" Grid.Column="1" Margin="10 10 10 10" RadiusX="100" RadiusY="100"/>
+            <Rectangle Fill="White" Grid.Row="1" Grid.Column="2" Margin="10 10 10 10" RadiusX="100" RadiusY="100"/>
+            <Rectangle Fill="Purple" Grid.Row="2" Grid.Column="0" Margin="10 10 10 10" RadiusX="100" RadiusY="100"/>
+            <Rectangle Fill="Green" Grid.Row="2" Grid.Column="1" Margin="10 10 10 10" RadiusX="100" RadiusY="100"/>
+            <Rectangle Fill="Orange" Grid.Row="2" Grid.Column="2" Margin="10 10 10 10" RadiusX="100" RadiusY="100"/>
+            
+        </Grid>
+        
+    </Grid>
+
+</phone:PhoneApplicationPage>
