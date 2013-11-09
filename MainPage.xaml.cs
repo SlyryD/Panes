@@ -7,6 +7,7 @@ using System.Windows.Controls;
 using System.Windows.Navigation;
 using Microsoft.Phone.Controls;
 using Microsoft.Phone.Shell;
+using Microsoft.Phone.Controls;
 using panes.Resources;
 
 namespace panes
@@ -26,6 +27,7 @@ namespace panes
         {
             NavigationService.Navigate(new Uri(@"/Page1.xaml", UriKind.Relative));
         }
+
 
         // Sample code for building a localized ApplicationBar
         //private void BuildLocalizedApplicationBar()
